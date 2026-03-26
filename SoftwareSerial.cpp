@@ -29,6 +29,7 @@ The latest version of this library can always be found at
 http://arduiniana.org.
 */
 
+#pragma GCC push_options
 #pragma GCC optimize("Os")
 
 // When set, _DEBUG co-opts pins 11 and 13 for debugging with an
@@ -677,3 +678,5 @@ int SoftwareSerial::peek()
 }
 
 #endif
+
+#pragma GCC pop_options
