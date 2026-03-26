@@ -29,6 +29,8 @@ The latest version of this library can always be found at
 http://arduiniana.org.
 */
 
+#pragma GCC optimize("Os")
+
 // When set, _DEBUG co-opts pins 11 and 13 for debugging with an
 // oscilloscope or logic analyzer.  Beware: it also slightly modifies
 // the bit times, so don't rely on it too much at high baud rates
