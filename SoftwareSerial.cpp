@@ -29,8 +29,10 @@ The latest version of this library can always be found at
 http://arduiniana.org.
 */
 
+#ifdef SOFTWARESERIAL_FORCE_OPT
 #pragma GCC push_options
 #pragma GCC optimize("Os")
+#endif
 
 // When set, _DEBUG co-opts pins 11 and 13 for debugging with an
 // oscilloscope or logic analyzer.  Beware: it also slightly modifies
@@ -679,4 +681,7 @@ int SoftwareSerial::peek()
 
 #endif
 
+#ifdef SOFTWARESERIAL_FORCE_OPT
 #pragma GCC pop_options
+#endif
+
