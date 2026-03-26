@@ -331,7 +331,7 @@ inline void SoftwareSerial::tunedDelay(uint16_t delay) {
     "cpi %A0, 0xFF \n\t"
     "cpc %B0, %1 \n\t"
     "brne .-10 \n\t"
-    : "+r" (delay), "+a" (tmp)
+    : "+r" (delay), "=&d" (tmp)
     : "0" (delay)
     );
 }
